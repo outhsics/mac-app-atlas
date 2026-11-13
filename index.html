@@ -1,0 +1,1787 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的 Mac 应用图鉴 · App Atlas</title>
+<meta name="description" content="一份来自真实本机扫描的 Mac 应用图鉴。按用途探索开发、AI、设计、效率与系统应用，快速了解每款工具做什么。">
+<meta name="theme-color" content="#f6f5f1">
+<style>
+/* 使用系统字体和内嵌数据，保证离线打开与 GitHub Pages 部署一致。 */
+:root{--paper:#f6f5f1;--ink:#252724;--muted:#686c63;--line:#dddfd6;--accent:#d7f590;--purple:#eee9fa;--green:#3d5633}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8060c4;outline-offset:4px}.skip{position:fixed;top:-70px;left:20px;z-index:9;background:white;padding:10px}.skip:focus{top:12px}.top{height:84px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5%;gap:15px}.brand{font-size:19px;letter-spacing:-.5px;font-weight:750;text-decoration:none;display:flex;gap:12px;align-items:center}.mark{width:33px;height:33px;background:var(--ink);color:var(--accent);border-radius:10px;display:grid;place-items:center;font-size:20px}.top-right{display:flex;gap:24px;align-items:center;font-size:12px}.top-right a{text-decoration:none}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#73914c;margin-right:7px}.wrap{max-width:1440px;margin:auto;padding:48px 5% 30px}.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:55px;align-items:center;margin-bottom:45px}.eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:650;color:var(--muted)}h1{font-size:clamp(32px,4vw,54px);letter-spacing:-2px;line-height:1.2;margin:18px 0 20px;font-weight:700}h1 span{color:#667c4c}.intro{max-width:520px;color:var(--muted);font-size:15px}.hero-panel{background:var(--purple);border:1px solid #e1d9f1;border-radius:24px;padding:27px 30px;position:relative;overflow:hidden}.panel-top{display:flex;justify-content:space-between;font-size:11px;letter-spacing:1.4px;color:#65587b}.orbit{position:absolute;width:210px;height:210px;border:1px solid #d0c4e8;border-radius:50%;right:-38px;top:-75px}.orbit:after{content:"✳";position:absolute;bottom:0;left:24px;font-size:69px;line-height:1;color:#8f7aae}.big-number{font-size:73px;line-height:1.3;font-weight:600;letter-spacing:-4px}.big-number small{font-size:13px;letter-spacing:0;font-weight:400;margin-left:13px;color:#65587b}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d8cee9;margin-top:12px;padding-top:17px;gap:12px}.stats strong{display:block;font-size:23px;font-weight:600;line-height:1.3}.stats span{font-size:11px;color:#65587b}.toolbar{display:flex;gap:12px;margin-bottom:28px;align-items:stretch}.search{flex:1;position:relative}.search .glass{position:absolute;left:18px;top:13px;font-size:22px;color:var(--muted)}.search input{width:100%;height:54px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 48px;color:var(--ink)}.search kbd{position:absolute;right:16px;top:16px;color:#7e8278;background:#f1f2ed;border:1px solid var(--line);border-radius:4px;padding:0 6px;font-size:12px}.toolbar select{border:1px solid var(--line);border-radius:12px;padding:0 32px 0 15px;background:#fff;color:var(--ink);max-width:180px}.reset{border:1px solid var(--line);border-radius:12px;background:transparent;padding:0 17px}.layout{display:grid;grid-template-columns:205px 1fr;gap:34px;align-items:start}.side{position:sticky;top:22px}.side-title{font-size:11px;letter-spacing:1.8px;color:var(--muted);margin:0 0 15px 12px}.categories{display:flex;flex-direction:column;gap:4px}.cat{background:transparent;border:0;text-align:left;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:9px;font-size:13px;color:#5c6158;width:100%}.cat:hover{background:#e9ebe3}.cat[aria-pressed=true]{background:var(--ink);color:white}.cat .num{margin-left:auto;font:11px ui-monospace,monospace;opacity:.75}.cat-icon{width:19px;font-size:15px}.side-note{border-top:1px solid var(--line);margin:25px 12px 0;padding-top:16px;font-size:11px;color:var(--muted);line-height:1.9}.results-top{display:flex;justify-content:space-between;align-items:center;margin:0 0 19px;gap:15px}.results-top h2{font-size:20px;margin:0;letter-spacing:-.5px}.result-count{font-size:12px;color:var(--muted);margin-top:2px}.check-label{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer;white-space:nowrap}.check-label input{accent-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;display:flex;flex-direction:column;min-height:235px;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#acb89a}.card-head{display:flex;gap:12px;align-items:center;margin-bottom:17px}.app-icon{width:43px;height:43px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:17px;font-weight:650;color:#42523c;background:#edf3e8}.card:nth-child(4n+2) .app-icon{background:#efeafa;color:#76608d}.card:nth-child(4n+3) .app-icon{background:#f9eee3;color:#946d43}.card:nth-child(4n+4) .app-icon{background:#e7f0f6;color:#4d7486}.card h3{font-size:14px;line-height:1.4;margin:0 0 3px;overflow-wrap:anywhere}.type{font-size:10px;color:#81867b}.desc{font-size:12px;line-height:1.9;color:#646a60;margin:0 0 18px;flex:1}.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:10px}.tag{border-radius:5px;background:#f3f4ef;color:#69715d;padding:3px 7px}.source{color:#72796b;text-underline-offset:3px}.pending{color:#9a6a24;background:#fbf0db}.empty{padding:65px 20px;text-align:center;border:1px dashed #c5cbbb;border-radius:16px;grid-column:1/-1}.empty h3{margin-top:0}.empty p{color:var(--muted);font-size:13px}.empty button{border:0;border-radius:8px;background:var(--accent);padding:9px 16px}.scope{margin-top:40px;border-top:1px solid var(--line);padding-top:23px;font-size:12px;color:var(--muted)}.scope summary{cursor:pointer;font-weight:600;color:var(--ink)}.scope p{max-width:900px;line-height:1.9}footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:35px;padding:24px 0;font-size:10px;color:var(--muted);letter-spacing:.5px}footer a{text-underline-offset:3px}.back{position:fixed;bottom:22px;right:22px;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:white;text-decoration:none;display:grid;place-items:center;box-shadow:0 2px 12px #00000008}@media(min-width:1450px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:180px 1fr;gap:24px}.hero{gap:30px}.hero-panel{padding:23px}}@media(max-width:760px){.top{height:68px}.top-right .date{display:none}.wrap{padding-top:30px}.hero{grid-template-columns:1fr;gap:22px;margin-bottom:26px}h1{letter-spacing:-1px}.hero-panel{padding:19px 23px}.big-number{font-size:55px}.hero-panel .panel-top{font-size:10px}.stats{margin-top:5px;padding-top:12px}.stats strong{font-size:20px}.toolbar{flex-wrap:wrap;gap:8px}.search{flex-basis:100%}.toolbar select{height:42px;flex:1;max-width:none}.reset{height:42px}.layout{display:block}.side{position:static;margin-bottom:23px}.side-title,.side-note{display:none}.categories{flex-direction:row;overflow-x:auto;gap:7px;padding-bottom:8px}.cat{width:auto;flex-shrink:0;border:1px solid var(--line);padding:8px 12px}.cat .num{margin-left:4px}.grid{gap:10px}.card{padding:16px;min-height:235px}.card-head{gap:9px;align-items:flex-start}.app-icon{width:34px;height:34px;font-size:13px;border-radius:9px}.card h3{font-size:13px}.desc{font-size:12px}.results-top h2{font-size:18px}.results-top{align-items:start}.card-foot{flex-wrap:wrap}.scope{margin-top:28px}}@media(max-width:420px){.grid{grid-template-columns:1fr}.card{min-height:195px}.card-head{margin-bottom:12px}.top-right{gap:10px}.brand{font-size:17px}.stats span{font-size:10px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}@media print{.top,.toolbar,.side,.back,.check-label{display:none}.layout{display:block}.grid{grid-template-columns:repeat(3,1fr)}.card{break-inside:avoid}.hero{margin-bottom:20px}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#catalog">跳到应用清单</a>
+<header class="top"><a class="brand" href="#top"><span class="mark" aria-hidden="true">✳</span> App Atlas<span style="font-weight:400;color:#8b8f84">/</span>应用图鉴</a><div class="top-right"><span class="date"><i class="dot"></i>2026.11.13 · 本机快照</span><a href="https://github.com/outhsics/mac-app-atlas" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="title"><div><div class="eyebrow">A PERSONAL SOFTWARE FIELD GUIDE</div><h1>装过的每个工具，<br><span>都有它的用武之地。</span></h1><p class="intro">从 AI 工作搭档到顺手的小工具，一次整理我的 Mac 应用。按用途探索，找到名字，也读懂它能做什么。</p></div><div class="hero-panel"><div class="orbit" aria-hidden="true"></div><div class="panel-top"><span>THE COLLECTION</span><span>MAC / 01</span></div><div class="big-number"><span id="total">215</span><small>个应用条目</small></div><div class="stats"><div><strong id="installed">—</strong><span>用户安装应用</span></div><div><strong id="system">—</strong><span>系统目录应用</span></div><div><strong id="web">—</strong><span>网页快捷入口</span></div></div></div></section>
+<section aria-label="搜索与筛选"><div class="toolbar"><div class="search"><span class="glass" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索应用名称或用途，例如：截图、数据库、翻译…" aria-label="搜索应用名称或用途" autocomplete="off"><kbd aria-hidden="true">/</kbd></div><select id="kind" aria-label="应用类型"><option value="all">所有类型</option><option value="installed">用户安装应用</option><option value="system">系统目录应用</option><option value="web">网页快捷入口</option></select><select id="sort" aria-label="排序方式"><option value="name">名称 A—Z</option><option value="category">按用途分类</option></select><button class="reset" id="reset" type="button">重置</button></div></section>
+<div class="layout"><aside class="side" aria-label="应用分类"><p class="side-title">EXPLORE / 按用途探索</p><nav id="categories" class="categories" aria-label="用途分类"></nav><div class="side-note">一次真实的本机扫描。<br>名称来自应用安装包，介绍结合公开资料与元数据。<br><br>不确定的用途，保留「待核实」标记。</div></aside><section id="catalog" aria-labelledby="category-title"><div class="results-top"><div><h2 id="category-title">全部应用</h2><div id="result-count" class="result-count" role="status" aria-live="polite"></div></div><label class="check-label"><input id="pending" type="checkbox">只看待核实</label></div><div id="grid" class="grid"></div><noscript><p>请启用 JavaScript 以搜索和浏览完整清单，也可在仓库查看 apps.json。</p></noscript></section></div>
+<details class="scope"><summary>关于这份清单 · 扫描范围与说明</summary><p>扫描日期：2026 年 11 月 13 日（北京时间）。覆盖公共应用目录、当前用户应用目录和系统应用目录，包含其中的实用工具与网页快捷应用。按外层 .app 应用包计数，不展开内部 Helper，不把命令行工具、浏览器扩展、安装镜像、废纸篓或任意其他文件夹中的应用计入。存在安装包不代表已经运行验证。</p><p>「系统目录应用」按安装位置统计；Safari、Xcode 等位于公共应用目录的 Apple 应用仍计入用户安装应用。同名或多个版本保留独立条目。用途说明区分公开来源、本机元数据和待核实；一般介绍概括产品常见用途，不代表本机版本具备所有功能，也不代表登录、订阅或服务可用。卡片上的字符图标仅用于视觉区分，并非官方商标。</p><p>公开内容仅包含应用名称、用途、分类与说明来源。不包含安装路径、账号、配置、聊天内容、凭据或本地文件。此页面为静态快照，不会扫描访问者的电脑。</p></details>
+<footer><span>APP ATLAS · 少一点遗忘，多一点用得上。</span><a href="https://github.com/outhsics/mac-app-atlas" target="_blank" rel="noopener noreferrer">查看公开源码 ↗</a></footer>
+</main><a class="back" href="#top" aria-label="回到顶部">↑</a>
+<script id="app-data" type="application/json">[
+  {
+    "name": "Activity Monitor",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "活动监视器：查看进程、CPU、内存、能耗和网络使用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "aDrive",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "阿里云盘客户端，用于保存、下载和分享云端文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "AdsPower Global",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "多浏览器环境管理工具，为不同账号提供独立浏览器配置。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "AirPort Utility",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "AirPort 实用工具：配置兼容的 Apple 无线路由设备。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Amphetamine",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "控制 Mac 保持唤醒，避免指定任务运行时自动休眠。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Another Redis Desktop Manager",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "图形化 Redis 客户端，用于查看键值、连接实例和调试数据。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Antigravity",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "Google 的 AI 开发工具，用智能体辅助编写、运行和检查代码。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Antigravity IDE",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "Antigravity IDE 独立应用包，用于 AI 辅助开发。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Apifox",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "API 设计、接口文档、调试、Mock 与自动化测试工具。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "App Store",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "浏览、下载和更新 Mac 应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Apps",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "应用启动入口，浏览和打开已安装应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Ardot",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "腾讯设计协作工具；具体本机版本功能待确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "Audio MIDI Setup",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "音频 MIDI 设置：配置音频设备和 MIDI 连接。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Automator",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "自动操作：以可视化工作流程自动处理文件和应用操作。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "BaiduNetdisk",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "百度网盘：云端存储、备份、下载和分享文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Bitwarden",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "密码管理器，用于保存和管理登录凭据。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Blip",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "跨设备文件传输工具，适合发送大型文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Bluetooth File Exchange",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "蓝牙文件交换：与兼容设备通过蓝牙传输文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Bob",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "macOS 划词翻译、截图翻译和 OCR 识别工具。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Books",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "图书：阅读和管理电子书、有声书与 PDF。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Boot Camp Assistant",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "启动转换助理：在兼容的 Intel Mac 上配置 Windows。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Brave Browser",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "注重隐私的 Chromium 浏览器，提供广告和追踪拦截。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Calculator",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "计算器：进行基础和科学计算。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Calendar",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "日历：管理日程、会议和日历订阅。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "CatBar",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "墨问推出的 Mac 菜单栏图标管理工具，可收纳菜单栏项目。",
+    "source": "https://macshuo.com/",
+    "status": "常见用途"
+  },
+  {
+    "name": "CC Switch",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "集中管理 AI 编码客户端的模型供应商和连接配置。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "ChatGPT",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "OpenAI 桌面 AI 助手；本机显示名为 ChatGPT，包标识为 com.openai.codex。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Chess",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "国际象棋游戏，可与电脑对弈。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Clash Verge",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "管理代理配置、节点选择和网络分流规则。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Claude",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Anthropic AI 助手，用于写作、分析资料和辅助编程。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Claude Code URL Handler",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "Claude Code 的链接处理辅助应用，用于将相关链接交给客户端。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "CleanShot X",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "截图、录屏、滚动截图、标注和整理屏幕素材。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Clock",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "时钟：使用世界时钟、闹钟、计时器和秒表。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "cmux",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "面向开发和 AI Agent 的终端工作区，管理多个终端和任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "CodeBuddy CN",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "腾讯 AI 编程工具，辅助理解项目、生成和修改代码。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Cola",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "桌面 AI 助手，将对话与电脑任务执行结合。",
+    "source": "https://colaos.ai/",
+    "status": "常见用途"
+  },
+  {
+    "name": "ColorSync Utility",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "色彩同步实用工具：查看和管理颜色描述文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Command Code",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "将 AI 对话、文件、Git 改动、终端和预览整合到编程工作区。",
+    "source": "https://commandcode.ai/docs/desktop",
+    "status": "常见用途"
+  },
+  {
+    "name": "Console",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "控制台：查看系统日志和诊断记录。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Contacts",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "通讯录：管理联系人及联系信息。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Cua Spaces",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "为智能体提供独立电脑环境，用于桌面操作和任务执行。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Cursor",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 代码编辑器，通过对话和补全辅助修改与理解项目。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "DBX",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "图形数据库工作台，用于连接数据库、查看数据和执行 SQL。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "DeepSeek Harness",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "DeepSeek 智能体桌面工作环境，用于组织和执行任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Dictionary",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "词典：查询词语释义和内置参考词典。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Digital Color Meter",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "数码测色计：读取屏幕像素颜色数值。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Disk Utility",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "磁盘工具：检查、分区、格式化磁盘和管理磁盘映像。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Doubao",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "豆包 AI 助手，用于对话、写作、搜索和资料处理。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "DriveDx",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "读取磁盘健康指标，检查存储设备状态和故障征兆。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "ego lite",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "面向 AI Agent 的浏览器，让智能体在浏览器中执行网页任务。",
+    "source": "https://github.com/citrolabs/ego-lite",
+    "status": "常见用途"
+  },
+  {
+    "name": "Eudic",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "欧路词典，查询词义、翻译和管理词汇学习资料。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "FaceTime",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "进行音频和视频通话。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "FanBox",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "在同一界面浏览文件、运行编码 Agent 终端并查看改动。",
+    "source": "https://github.com/alchaincyf/fanbox",
+    "status": "常见用途"
+  },
+  {
+    "name": "Feedback Assistant",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "Apple 反馈助理，用于提交系统问题与诊断反馈。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Figma",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "协作式界面设计与原型工具，适合 UI 设计和研发交付。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "FindMy",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "查找：定位 Apple 设备和已共享位置的联系人。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Folo",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "聚合 RSS 等内容来源的阅读器，用于集中跟踪更新。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Font Book",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "字体册：预览、安装和管理字体。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Freebuff",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 编程智能体桌面端，用于编写代码和管理并行任务。",
+    "source": "https://github.com/CodebuffAI/freebuff",
+    "status": "常见用途"
+  },
+  {
+    "name": "Freeform",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "无边记：在自由画布上组织文字、图片和想法。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Games",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "游戏：集中查看和启动游戏及相关游戏活动。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Gemini",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Google AI 助手，用于对话、资料分析、写作和编程辅助。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "GenOffice",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "整合文档与表格模块的办公应用；用途来自安装包描述。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Ghostty",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "高性能原生终端模拟器，用于运行命令行工具。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Google Chrome",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "Google 网页浏览器，支持扩展和网页开发调试。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Google Slides",
+    "kind": "web",
+    "category": "办公与沟通",
+    "description": "Google 幻灯片入口，用于在线制作和协作演示文稿。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Grapher",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "图形计算器：绘制数学函数的二维和三维图形。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Grok Bot",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "安装包描述为 Grok Bot 桌面智能体；不与其他 Grok 客户端混同。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Hammerspoon",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "使用 Lua 脚本自动化 macOS 的窗口、快捷键和系统行为。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "HBuilderX",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "DCloud 开发工具，用于 uni-app、网页和小程序开发。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Hermes",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Nous Research 的 AI Agent 工具，用于执行任务与自动化工作流。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Home",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "家庭：管理兼容 Apple 家庭的智能家居设备。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Homebrew",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "Homebrew 命名的桌面应用；并非仅表示命令行 brew 已安装，具体界面用途待核实。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "HuaStudio",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "花录：录制屏幕并制作带自动运镜的演示视频。",
+    "source": "https://apps.apple.com/cn/developer/云飞-陈/id1773006003",
+    "status": "常见用途"
+  },
+  {
+    "name": "Ice",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "管理和隐藏 macOS 菜单栏图标，整理菜单栏空间。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "IINA",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "macOS 视频播放器，用于播放本地影音和网络媒体。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "ima.copilot",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "腾讯 AI 知识库助手，用于资料整理、检索、问答和写作。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Image Capture",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "图像捕捉：从相机、扫描仪等设备导入图像。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Image Playground",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "图乐园：通过描述和素材生成图像。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Immersive Translate",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "沉浸式翻译，用于网页和阅读材料的双语翻译。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "IntelliJ IDEA",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "JetBrains Java/Kotlin 开发环境，用于后端开发与调试。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "iPhone Mirroring",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "iPhone 镜像：在 Mac 上查看和操作兼容的 iPhone。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Journal",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "手记：记录日常经历和个人感想。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Kiro CLI",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "命令行 AI 开发助手，辅助理解代码和执行开发任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Kun",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Kun 智能体运行时的桌面工作台；用途来自安装包描述。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Langflow",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "可视化搭建语言模型应用和智能体工作流。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Lark",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "飞书 / Lark 协作客户端，整合团队聊天、会议、文档和协作。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Linear",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "团队项目和问题跟踪工具，管理任务、迭代和产品进度。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "LM Studio",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "下载并运行本地语言模型，进行聊天或提供本地模型服务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "LocalSend",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "在局域网内跨设备传输文件，无需依赖云盘。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Lody",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "管理 AI 编程会话和独立工作区，支持移动端访问。",
+    "source": "https://lody.ai/blog/introducing-lody/",
+    "status": "常见用途"
+  },
+  {
+    "name": "LosslessCut",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "无损剪切音视频，快速截取片段而无需完整重新编码。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Maccy",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "轻量剪贴板历史工具，查找和重复粘贴已复制内容。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Magnifier",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "放大镜：通过放大画面辅助查看细节。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "magpie",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "集中切换 AI 编码工具使用的模型，并通过本地网关连接供应商。",
+    "source": "https://github.com/yetone/magpie",
+    "status": "常见用途"
+  },
+  {
+    "name": "Mail",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "邮件：收发邮件并管理多个邮件账户。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Manus",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "通用 AI Agent，用于研究、资料处理和多步骤任务执行。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Maps",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "地图：查找地点、规划路线和浏览地图。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Mercury",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "neolee 开发的现代 RSS 阅读器，用于聚合订阅内容。",
+    "source": "https://github.com/neolee/mercury",
+    "status": "常见用途"
+  },
+  {
+    "name": "Messages",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "信息：收发 iMessage 和关联设备的消息。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Migration Assistant",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "迁移助理：将账户和文件迁移到 Mac。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Minis",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "OpenMinis 跨平台 AI Agent 应用，提供对话与任务执行能力。",
+    "source": "https://github.com/OpenMinis/OpenMinis",
+    "status": "常见用途"
+  },
+  {
+    "name": "Mission Control",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "调度中心：查看窗口、桌面空间和全屏应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Moshi",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "SSH / Mosh 终端工具，用于远程访问电脑和 AI Agent 会话。",
+    "source": "https://getmoshi.app/",
+    "status": "常见用途"
+  },
+  {
+    "name": "Motrix",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "多协议下载管理器，集中管理下载任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Multica",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "桌面 AI 协作工具，连接本机 AI 编码工具并组织智能体工作。",
+    "source": "https://multica.ai/docs/desktop-app",
+    "status": "公开来源"
+  },
+  {
+    "name": "Muse",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Meta 个人 AI Agent，可在授权后处理文件和应用任务。",
+    "source": "https://ai.meta.com/muse/download/",
+    "status": "常见用途"
+  },
+  {
+    "name": "Music",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "音乐：播放、整理音乐资料库和使用 Apple Music。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Navicat Premium Lite",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "图形数据库客户端，用于连接数据库和执行查询。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "NetNewsWire",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "RSS 阅读器，集中订阅和阅读网站更新。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "News",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "新闻：阅读 Apple News 内容，服务可用性因地区而异。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "NextAI Translator",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "AI 翻译工具，用于划词翻译、润色和解释文本。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Noi",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "整合多个 AI 网页服务的桌面客户端。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Notes",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "备忘录：记录文字、清单、图片和扫描件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Notion",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "将笔记、文档、数据库和项目资料组织在同一工作区。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Obsidian",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "以本地 Markdown 文件为基础的笔记与双向链接知识库。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Octop",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "腾讯开源 AI 助手，支持自托管、多用户与多智能体任务协作。",
+    "source": "https://github.com/TencentCloud/Octop",
+    "status": "公开来源"
+  },
+  {
+    "name": "OmniDiskSweeper",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "按文件大小浏览磁盘占用，定位占空间的目录和文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Onyx",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "AI 对话与知识检索平台；本机包标识为 app.onyx.desktop。",
+    "source": "https://github.com/onyx-dot-app/onyx",
+    "status": "常见用途"
+  },
+  {
+    "name": "Open Design",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "AI 设计工作区，用于制作原型、网站、演示文稿和视觉内容。",
+    "source": "https://github.com/nexu-io/open-design",
+    "status": "常见用途"
+  },
+  {
+    "name": "OpenChamber",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 编码智能体的图形工作区，用于管理会话与代码任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "OpenLogi",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "配置罗技设备的按键映射、DPI 和滚轮行为。",
+    "source": "https://openlogi.org/docs/installation",
+    "status": "常见用途"
+  },
+  {
+    "name": "OpenWorker",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "桌面 AI Agent，将模型连接到工作工具，执行日常任务并交付文件。",
+    "source": "https://openworker.com/",
+    "status": "公开来源"
+  },
+  {
+    "name": "OrbStack",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "在 Mac 上运行 Linux 虚拟机与容器的开发环境。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Orca",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 编程工作区，组织智能体任务、代码仓库与工作树。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Otty",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "原生终端工具，用于命令行开发和智能体工作流。",
+    "source": "https://otty.sh/",
+    "status": "常见用途"
+  },
+  {
+    "name": "Paseo",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 编程会话与项目管理工具，支持跨设备继续开发任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Passwords",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "密码：管理密码、通行密钥和验证码。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Phone",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "电话：在 Mac 上使用关联的通话功能。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Photo Booth",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "使用摄像头拍照、录制短视频和应用趣味效果。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Photos",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "照片：浏览、整理和编辑照片及视频资料库。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "PicGo",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "图片上传工具，上传到图床并生成可引用的图片链接。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Podcasts",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "播客：订阅、收听和管理播客节目。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "PopClip",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "选中文字后弹出操作菜单，快速复制、搜索、翻译或调用扩展。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Preview",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "预览：查看、标注图片和 PDF 文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Print Center",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "打印中心：管理打印机任务和打印队列。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "QiDao",
+    "kind": "installed",
+    "category": "生活与娱乐",
+    "description": "macOS 围棋前端，用于围棋棋局相关操作。",
+    "source": "https://github.com/neolee/qidao",
+    "status": "常见用途"
+  },
+  {
+    "name": "QQ",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "腾讯即时通信客户端，用于聊天、群组和传输文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "QuarkCloudDrive",
+    "kind": "installed",
+    "category": "文件与云盘",
+    "description": "夸克网盘客户端，用于云端文件保存、下载和管理。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "QuickTime Player",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "播放媒体文件，并进行基础录屏和录音。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Raindrop.io",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "跨设备保存网页书签，按集合和标签整理资料。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Raycast",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "快捷启动器，可搜索应用、执行命令和调用效率扩展。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Rectangle",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "通过快捷键或拖动快速分屏、排列和调整窗口。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Reminders",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "提醒事项：创建待办、清单与定时提醒。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Reqable",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "HTTP 抓包与 API 调试工具，检查网络请求和响应。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "RoxyBrowser",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "多环境浏览器，为账号管理提供隔离的浏览器配置。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "RustDesk",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "远程桌面工具，可连接和控制其他电脑。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Safari",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "Apple 网页浏览器，与系统和 Apple 设备生态集成。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Screen Sharing",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "屏幕共享：查看和控制支持共享的远程 Mac。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Screenshot",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "截屏：拍摄屏幕截图和录制屏幕。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Script Editor",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "脚本编辑器：编写和运行 AppleScript 等自动化脚本。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Shadowrocket",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "代理与规则分流客户端；本机安装的是移动端封装应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Shortcuts",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "快捷指令：组合应用操作并自动执行重复任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Shottr",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "轻量截图与标注工具，支持像素测量和屏幕取样。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Siri",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "Siri 语音助手，通过语音发起查询和系统操作。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Sitor — AI 1v1 Mastery Tutor",
+    "kind": "web",
+    "category": "知识与阅读",
+    "description": "AI 一对一学习辅导网页快捷应用；用途按应用标题识别。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Sitor — AI 1v1 Mastery Tutor 1",
+    "kind": "web",
+    "category": "知识与阅读",
+    "description": "另一份 Sitor 学习辅导网页快捷入口，保留独立条目。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "skills-manager",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "Agent Skills 桌面管理应用；具体支持的安装与同步方式待确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "Slack",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "团队聊天与协作平台，用频道组织消息和工具通知。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "SnapAI",
+    "kind": "installed",
+    "category": "用途未明",
+    "description": "安装包只提供 SnapAI 名称，缺少唯一产品标识，暂不按同名产品推断用途。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "SnapAI-Preview",
+    "kind": "installed",
+    "category": "用途未明",
+    "description": "SnapAI 的预览命名版本，具体用途和与正式版的差别待确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "Spotify",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "流媒体音乐和播客播放器，管理播放列表。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Startwork",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "企业 AI 管理与协作平台，集中管理成员、使用情况和任务成果。",
+    "source": "https://startwork.im/",
+    "status": "常见用途"
+  },
+  {
+    "name": "Stats",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "在菜单栏查看 CPU、内存、网络等系统运行指标。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Steam",
+    "kind": "installed",
+    "category": "生活与娱乐",
+    "description": "购买、下载、更新和启动电脑游戏。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Stickies",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "便笺：在桌面放置轻量文本备忘。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Stitch",
+    "kind": "web",
+    "category": "设计与影音",
+    "description": "界面设计工具的网页快捷入口；具体绑定服务待确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "Stocks",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "股市：查看行情信息、关注列表和财经资讯。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Substack",
+    "kind": "web",
+    "category": "知识与阅读",
+    "description": "订阅和阅读作者文章、通讯与创作内容的网页快捷入口。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "System Information",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "系统信息：查看硬件、软件和网络配置概况。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "System Settings",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "系统设置：配置网络、显示、账户与其他系统选项。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "T3 Code (Beta)",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "AI 编程工作区，用于管理编码智能体会话和代码改动。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Tabbit",
+    "kind": "installed",
+    "category": "浏览器",
+    "description": "AI 浏览器，将网页浏览和智能助手任务结合。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Tabby",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "可扩展的终端与 SSH 客户端，管理本地和远程终端会话。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Tailscale",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "组建基于 WireGuard 的设备私有网络，连接远程设备。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Telegram",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "即时通信客户端，支持私聊、群组、频道和文件分享。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Telegram Lite",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "Telegram 的轻量桌面客户端，用于聊天、群组和频道。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Terminal",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "终端：通过命令行操作系统和运行开发工具。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Termius",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "SSH 终端与主机管理工具，用于连接远程服务器。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "TextEdit",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "文本编辑：创建和编辑纯文本与富文本文件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Textream",
+    "kind": "installed",
+    "category": "设计与影音",
+    "description": "提词工具，帮助录制视频或演讲时阅读稿件。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Thor Launcher",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "为应用设置快捷键，快速打开或切换到指定应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "TickTick",
+    "kind": "installed",
+    "category": "系统与效率",
+    "description": "滴答清单：管理待办、日历、提醒和专注任务。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Time Machine",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "时间机器：配置和恢复 Mac 备份。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Tips",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "提示：阅读 Apple 系统功能介绍与使用技巧。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "TV",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "Apple TV：浏览和播放影视内容。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Unsloth",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "面向模型微调与本地 AI 工作流的图形工具。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "usework",
+    "kind": "installed",
+    "category": "用途未明",
+    "description": "已确认存在独立安装包，但可靠产品说明不足，暂不推断其功能。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "UURemote",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "网易 UU 远程工具，用于远程连接和控制电脑。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Visual Studio Code",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "代码编辑器，通过扩展支持前后端开发、调试和 Git。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "VoiceMemos",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "语音备忘录：录制、管理和修剪音频。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "VoiceOver Utility",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "旁白实用工具：设置屏幕阅读辅助功能。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Wake",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "汇总本机 AI 编码会话，支持浏览、搜索和继续会话。",
+    "source": "https://github.com/iAmCorey/Wake",
+    "status": "常见用途"
+  },
+  {
+    "name": "Wallpets",
+    "kind": "installed",
+    "category": "生活与娱乐",
+    "description": "桌面宠物应用；具体互动和功能需在应用内确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "Warp",
+    "kind": "installed",
+    "category": "终端与运维",
+    "description": "集成 AI 辅助的终端，运行命令并组织开发工作流。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Weather",
+    "kind": "system",
+    "category": "系统自带",
+    "description": "天气：查看城市天气、预报和气象信息。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "WeChat",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "微信桌面客户端，用于聊天、文件传输和社交沟通。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "wechatwebdevtools",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "微信开发者工具，用于开发、预览和调试微信小程序。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "WooTechy MirrorDisp",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "手机投屏工具，在电脑上显示和操作手机画面。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "WorkBuddy",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "腾讯桌面 AI 工作助手，帮助执行办公任务和处理资料。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "WorkBuddy AI",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "另一份 WorkBuddy 命名的独立应用包；与腾讯 WorkBuddy 的关系待核实。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "wpsoffice",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "WPS Office：编辑文档、表格、演示文稿和处理 PDF。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Wu",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "基于 Rust 的原生代码编辑器，提供类似 VS Code 的操作体验。",
+    "source": "https://github.com/farshed/wu",
+    "status": "常见用途"
+  },
+  {
+    "name": "Xcode",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "Apple 开发环境，用于构建和调试 macOS、iOS 等平台应用。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Xiaomi Home",
+    "kind": "installed",
+    "category": "生活与娱乐",
+    "description": "米家：管理和控制兼容的智能家居设备。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "Xiaomi MiMo",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "小米 MiMo 桌面 AI 应用；本机具体功能尚待核实。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "YouFlow",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "本地知识库与 AI 工作区，将智能体任务交给 Claude Code 执行。",
+    "source": "https://youflow.cc/",
+    "status": "常见用途"
+  },
+  {
+    "name": "YouMind",
+    "kind": "installed",
+    "category": "知识与阅读",
+    "description": "AI 创作与知识工作区，用于收集素材、研究和组织内容。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "ZCode",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "智谱 ZCode 桌面 AI 编程工具；本机安装包指向 zcode.z.ai。",
+    "source": "",
+    "status": "本机元数据"
+  },
+  {
+    "name": "Zed",
+    "kind": "installed",
+    "category": "开发与数据库",
+    "description": "高性能代码编辑器，支持协作与 AI 编程工作流。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "上传测试文件生成器",
+    "kind": "installed",
+    "category": "本地定制",
+    "description": "按名称判断，用于生成上传功能测试所需的文件；具体格式待确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "企业微信",
+    "kind": "installed",
+    "category": "办公与沟通",
+    "description": "企业沟通和办公工具，支持工作群、组织通讯录和客户联系。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "小米互联服务",
+    "kind": "installed",
+    "category": "网络与远程",
+    "description": "连接小米设备与 Mac，提供设备互联能力。",
+    "source": "",
+    "status": "常见用途"
+  },
+  {
+    "name": "榜样教育工作台",
+    "kind": "installed",
+    "category": "本地定制",
+    "description": "本地教育业务工作台；具体业务入口需在应用内确认。",
+    "source": "",
+    "status": "待核实"
+  },
+  {
+    "name": "蓝耘天衍",
+    "kind": "installed",
+    "category": "AI 与智能体",
+    "description": "面向办公的桌面智能体，用于文档处理、创作与数据分析。",
+    "source": "https://nova.lanyun.net/",
+    "status": "常见用途"
+  }
+]</script>
+<script>
+'use strict';
+/** 应用图鉴：所有筛选仅在浏览器内执行，不读取设备信息或调用外部接口。 */
+const apps = JSON.parse(document.getElementById('app-data').textContent);
+const categories = ['全部应用','AI 与智能体','开发与数据库','终端与运维','浏览器','设计与影音','办公与沟通','知识与阅读','文件与云盘','网络与远程','系统与效率','生活与娱乐','本地定制','系统自带','用途未明'];
+const icons = ['◈','✳','⌘','›_','◎','◐','▤','▧','▱','⇄','⚙','◇','▦','◉','?'];
+const ui = Object.fromEntries(['search','kind','sort','pending','grid','categories','category-title','result-count'].map(id=>[id,document.getElementById(id)]));
+let selected = '全部应用';
+/** 创建文本节点，避免将扫描到的应用名称作为 HTML 执行。 */
+function element(tag, className, text) { const node=document.createElement(tag); if(className) node.className=className; if(text!==undefined) node.textContent=text; return node; }
+/** 同时应用用途、类型、核实状态和多关键词条件；名称排序使用中文自然排序。 */
+function render() {
+ const terms=ui.search.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+ const filtered=apps.filter(a=>(selected==='全部应用'||a.category===selected)&&(ui.kind.value==='all'||a.kind===ui.kind.value)&&(!ui.pending.checked||a.status==='待核实')&&terms.every(t=>`${a.name} ${a.description} ${a.category}`.toLocaleLowerCase().includes(t)));
+ filtered.sort((a,b)=>(ui.sort.value==='category'?a.category.localeCompare(b.category,'zh-CN'):0)||a.name.localeCompare(b.name,'zh-CN',{numeric:true}));
+ ui['category-title'].textContent=selected;
+ ui['result-count'].textContent=`显示 ${filtered.length} / ${apps.length} 个条目`;
+ ui.categories.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===selected)));
+ const fragment=document.createDocumentFragment();
+ for(const app of filtered){
+  const card=element('article','card'); const head=element('div','card-head'); const icon=element('div','app-icon',Array.from(app.name.replace(/[^\p{L}\p{N}]/gu,'')).slice(0,2).join('').toUpperCase());icon.setAttribute('aria-hidden','true');
+  const info=element('div');info.append(element('h3','',app.name),element('div','type',{installed:'用户安装应用',system:'系统目录应用',web:'网页快捷入口'}[app.kind]));head.append(icon,info);
+  const foot=element('div','card-foot');foot.append(element('span','tag',app.category));
+  if(app.status==='待核实')foot.append(element('span','tag pending','用途待核实'));
+  else if(app.source){const link=element('a','source','说明来源 ↗');link.href=app.source;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',`${app.name} 的说明来源`);foot.append(link);}
+  else foot.append(element('span','source',app.status==='本机元数据'?'本机元数据':'常见用途'));
+  card.append(head,element('p','desc',app.description),foot);fragment.append(card);
+ }
+ if(!filtered.length){const empty=element('div','empty');empty.append(element('h3','','没有找到匹配应用'),element('p','','换一个关键词，或重置筛选后再看看。'));const button=element('button','','重置所有筛选');button.type='button';button.addEventListener('click',reset);empty.append(button);fragment.append(empty);}
+ ui.grid.replaceChildren(fragment);
+}
+/** 恢复所有筛选，并将焦点送回搜索框以便继续操作。 */
+function reset(){selected='全部应用';ui.search.value='';ui.kind.value='all';ui.sort.value='name';ui.pending.checked=false;render();ui.search.focus();}
+for(let i=0;i<categories.length;i++){const name=categories[i],count=apps.filter(a=>name==='全部应用'||a.category===name).length;if(!count)continue;const button=element('button','cat');button.type='button';button.dataset.category=name;button.append(element('span','cat-icon',icons[i]),element('span','',name),element('span','num',String(count)));button.addEventListener('click',()=>{selected=name;render();});ui.categories.append(button);}
+for(const id of ['search','kind','sort','pending'])ui[id].addEventListener(id==='search'?'input':'change',render);
+document.getElementById('reset').addEventListener('click',reset);
+/** 斜杠聚焦搜索；输入控件内的正常输入和组合键不受影响。 */
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();ui.search.focus();}});
+document.getElementById('total').textContent=apps.length;
+for(const kind of ['installed','system','web'])document.getElementById(kind).textContent=apps.filter(a=>a.kind===kind).length;
+render();
+</script>
+</body></html>
