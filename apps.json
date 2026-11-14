@@ -91,9 +91,11 @@
     "name": "Ardot",
     "kind": "installed",
     "category": "设计与影音",
-    "description": "腾讯设计协作工具；具体本机版本功能待确认。",
-    "source": "",
-    "status": "待核实"
+    "description": "腾讯 AI 设计协作工具，可通过文字或参考图生成 UI，编辑矢量、布局与组件，并进行多人协作、设计标注和代码交付。",
+    "source": "https://docs.ardot.tencent.com/product/introduction.html",
+    "status": "公开来源",
+    "sourceNote": "本机腾讯包标识与更新源对应 Ardot，功能以官方产品文档为依据。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "Audio MIDI Setup",
@@ -579,9 +581,11 @@
     "name": "Homebrew",
     "kind": "installed",
     "category": "系统与效率",
-    "description": "Homebrew 命名的桌面应用；并非仅表示命令行 brew 已安装，具体界面用途待核实。",
-    "source": "",
-    "status": "待核实"
+    "description": "Homebrew 官方图形界面 BrewUI：搜索、安装、更新和管理 Homebrew 软件包，并展示底层包管理操作。",
+    "source": "https://github.com/Homebrew/BrewUI",
+    "status": "公开来源",
+    "sourceNote": "本机包标识、BrewUI 资源与程序内官方仓库链接相互对应。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "HuaStudio",
@@ -1259,9 +1263,11 @@
     "name": "skills-manager",
     "kind": "installed",
     "category": "AI 与智能体",
-    "description": "Agent Skills 桌面管理应用；具体支持的安装与同步方式待确认。",
-    "source": "",
-    "status": "待核实"
+    "description": "统一管理 AI Agent 技能库，从 Git 仓库、本地目录或技能市场安装技能，按项目或全局分发到 Claude Code、Codex 等工具，并支持备份与同步。",
+    "source": "https://github.com/xingkongliang/skills-manager",
+    "status": "公开来源",
+    "sourceNote": "按本机内置更新地址确认是 xingkongliang/skills-manager，未与其他同名项目混用。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "Slack",
@@ -1274,18 +1280,22 @@
   {
     "name": "SnapAI",
     "kind": "installed",
-    "category": "用途未明",
-    "description": "安装包只提供 SnapAI 名称，缺少唯一产品标识，暂不按同名产品推断用途。",
+    "category": "本地定制",
+    "description": "本地 AppleScript 截图工具：交互式选择截图区域，保存 PNG 并将文件路径复制到剪贴板，供 Claude Code 等工具读取；脚本本身不调用 AI 分析。",
     "source": "",
-    "status": "待核实"
+    "status": "本机源码",
+    "sourceNote": "只读反编译安装包内 main.scpt，确认截图、保存、复制路径与通知流程。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "SnapAI-Preview",
     "kind": "installed",
-    "category": "用途未明",
-    "description": "SnapAI 的预览命名版本，具体用途和与正式版的差别待确认。",
+    "category": "本地定制",
+    "description": "SnapAI 配套定位工具：查找截图目录中最新的 PNG，并在 Finder 中选中显示；没有截图时发送提示，不是另一款 AI 客户端或图片编辑器。",
     "source": "",
-    "status": "待核实"
+    "status": "本机源码",
+    "sourceNote": "只读反编译安装包内 main.scpt，确认按修改时间选取 PNG 并调用 Finder 定位。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "Spotify",
@@ -1331,9 +1341,11 @@
     "name": "Stitch",
     "kind": "web",
     "category": "设计与影音",
-    "description": "界面设计工具的网页快捷入口；具体绑定服务待确认。",
-    "source": "",
-    "status": "待核实"
+    "description": "Google Stitch 的网页快捷入口：通过文字、图片或参考素材生成并迭代界面设计和交互原型，辅助将设计交付到开发工具。",
+    "source": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+    "status": "公开来源",
+    "sourceNote": "安装包快捷网址明确指向 stitch.withgoogle.com，产品功能参照 Google 官方介绍。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "Stocks",
@@ -1498,10 +1510,12 @@
   {
     "name": "usework",
     "kind": "installed",
-    "category": "用途未明",
-    "description": "已确认存在独立安装包，但可靠产品说明不足，暂不推断其功能。",
-    "source": "",
-    "status": "待核实"
+    "category": "AI 与智能体",
+    "description": "集成 Codex 运行时的桌面 AI 工作区，组织聊天与项目，结合内置浏览器、终端、代码预览及邮件阅读和草稿处理完成任务。",
+    "source": "https://github.com/yangbo5207/usework-releases/blob/main/CHANGELOG.md",
+    "status": "公开来源",
+    "sourceNote": "本机更新地址对应该发布仓库；所述功能在已安装 0.1.7 及更早版本日志中有记录。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "UURemote",
@@ -1547,9 +1561,11 @@
     "name": "Wallpets",
     "kind": "installed",
     "category": "生活与娱乐",
-    "description": "桌面宠物应用；具体互动和功能需在应用内确认。",
-    "source": "",
-    "status": "待核实"
+    "description": "动态桌面宠物与壁纸应用：将有动画的动物伙伴放在桌面壁纸层，为工作桌面提供宠物陪伴和视觉装饰。",
+    "source": "https://wall-pets.com/",
+    "status": "公开来源",
+    "sourceNote": "结合本机宠物资源包、应用标识及 Wallpets 官方产品说明确认用途。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "Warp",
@@ -1603,9 +1619,11 @@
     "name": "WorkBuddy AI",
     "kind": "installed",
     "category": "AI 与智能体",
-    "description": "另一份 WorkBuddy 命名的独立应用包；与腾讯 WorkBuddy 的关系待核实。",
-    "source": "",
-    "status": "待核实"
+    "description": "腾讯 WorkBuddy 的桌面 AI Agent，可按自然语言要求整理文件、分析资料、生成报告或 PPT，并在任务工作区中查看产物与改动。",
+    "source": "https://www.workbuddy.ai/docs/workbuddy/Create-Task",
+    "status": "公开来源",
+    "sourceNote": "安装包 package.json 标注腾讯作者、WorkBuddy Desktop 产品名称及 workbuddy.ai 官网；保留与另一安装包的独立条目。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "wpsoffice",
@@ -1642,10 +1660,12 @@
   {
     "name": "Xiaomi MiMo",
     "kind": "installed",
-    "category": "AI 与智能体",
-    "description": "小米 MiMo 桌面 AI 应用；本机具体功能尚待核实。",
+    "category": "开发与数据库",
+    "description": "小米 MiMo 桌面客户端，集成 AI 编程助手，用于智能开发与代码任务；这里指本机桌面应用，而非仅指 MiMo 模型系列。",
     "source": "",
-    "status": "待核实"
+    "status": "本机元数据",
+    "sourceNote": "安装包 package.json 的产品描述明确为集成 AI 编程助手的智能开发工具，并提供 Xiaomi MiMo 下载主页。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "YouFlow",
@@ -1683,9 +1703,11 @@
     "name": "上传测试文件生成器",
     "kind": "installed",
     "category": "本地定制",
-    "description": "按名称判断，用于生成上传功能测试所需的文件；具体格式待确认。",
-    "source": "",
-    "status": "待核实"
+    "description": "用于上传与媒体测试：生成图片、音频和视频，配置分辨率、时长、帧率、码率、数量和格式，并可填充到指定文件大小；媒体生成依赖 ffmpeg。",
+    "source": "https://github.com/outhsics/upload-test-file-generator",
+    "status": "公开来源",
+    "sourceNote": "本机程序内用户指南链接对应此公开仓库，功能来自项目 README。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "企业微信",
@@ -1707,9 +1729,11 @@
     "name": "榜样教育工作台",
     "kind": "installed",
     "category": "本地定制",
-    "description": "本地教育业务工作台；具体业务入口需在应用内确认。",
+    "description": "基于 OpenWorker 的本地优先 AI 工作台，将资料、Agent 会话、文件产物与基础 CRM 数据管理放在同一界面；当前为内部试点 MVP，尚未通过正式生产验收。",
     "source": "",
-    "status": "待核实"
+    "status": "本机源码",
+    "sourceNote": "安装包内构建路径定位到本地项目，产品名、包标识和版本一致；用途及试点边界来自该项目 README。",
+    "verifiedOn": "2026-11-14"
   },
   {
     "name": "蓝耘天衍",
